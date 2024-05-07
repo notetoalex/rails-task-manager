@@ -1,0 +1,8 @@
+<p>This page is being broadcasted from app --> views --> tasks --> index.html.erb</p>
+<div class="container mt-3">
+  <h1>My Tasks</h1>
+  <% @tasks.each do |task| %>
+  <p><%= link_to task.title, task_path(task), class: 'text-decoration-none text-dark' %></p>
+  <% end %>
+  <p><%= link_to 'Add new task', new_task_path, class: 'btn btn-primary'  %></p>
+</div>
